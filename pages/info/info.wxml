@@ -1,0 +1,24 @@
+<!--index.wxml-->
+
+<view class="act-box" bindtap="bindViewTap">
+  <view class="time">
+    <view style="color: #333;">02/22</view>
+    <view class="date-time">12:30 ~ 16:20</view>
+  </view>
+  <view class="event">
+    <view class="event-pic">
+      <view wx:for="{{allImg}}" wx:key="id" style="overflow-y: hidden;width: 10vw;">
+        <image mode="widthFix" style="width: 10vw;" src="{{item.src}}"></image>
+      </view>
+    </view>
+    <view class="event-text">
+      <view class="event-title">
+        一起来玩阿瓦隆
+        <span style="font-size: .9rem;font-weight: 400; color: #333;">10 / 20</span>
+      </view>
+      <view class="event-info">
+        阿瓦隆是一款集推理，演说，隐藏身份于一体的言阿瓦隆是一款集推理，演说，隐藏身份于一体的推理，演说，隐藏身份于一体的言阿瓦隆是瓦隆是一款集言阿瓦隆是瓦隆是一款集推理，演说，隐藏身份于一体
+      </view>
+    </view>
+  </view>
+</view>

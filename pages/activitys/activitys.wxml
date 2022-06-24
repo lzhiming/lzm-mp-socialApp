@@ -1,0 +1,97 @@
+<!--logs.wxml-->
+<!-- <view class="login-card">
+  
+    <view class="day-cont" id="days">
+
+    </view>
+    <scroll-view class="scroll-view_H" scroll-left="{{scrollLeft}}" scroll-x="true">
+      <view class="days-list" wx:for="{{ dayList }}" wx:key="day"
+        data-day-time="{{item.ts}}" bindtap="onDaysChange">
+        <view class="{{item.selected ? 'days-selected' : 'days'}}">{{item.day}}</view>
+        <view class="days-week">{{item.week}}</view>
+      </view>
+    </scroll-view>
+  <van-empty wx:if="{{hasProfile}}" description="请授权获取头像昵称信息" style="text-align: center;">
+    <view style="width: 80vw;padding-top: 5vw;">
+      <van-button type="primary" plain bind:click="onCreate"
+      type="danger" round block>授权登录</van-button>
+
+      <van-button type="primary" plain bind:click="onGet"
+      type="danger" round block>获取信息</van-button>
+    </view>
+  </van-empty>
+  <view wx:else class="room-card">
+    <image mode="scaleToFill" class="top-image" src="/image/yjwj.jpg"></image>
+    <view class="info-content">
+      <view class="top-info">
+        <view class="info-left">
+          <view class="info-title">阿瓦隆小组阿瓦隆小组阿瓦隆小组
+            阿瓦隆小组阿瓦隆
+          </view>
+          <view class="info-time">19:15 ~ 20: 45</view>
+          <view class="info-member">7/15</view>
+        </view>
+        <view style="width: calc(44% - 20rpx);">
+          <button class="share-btn" open-type="share">邀请好友</button>
+          <view class="join-btn" style="background: #ccc;">退出活动</view>
+        </view>
+      </view>
+      <view class="member-info">
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q3auHgzwzM4vSzA98fVTMqia0yjZUYBa6mcSjlP58KoyrwH8a1ibhNMJHcR6V172UPxwtElLbwvGic0cJ39GYhkPg/132"></image>
+      </view>
+    </view>
+  </view>
+
+
+</view> -->
+<view class="top-day">
+  <view class="area" bindtap="changeArea"><van-icon name="location-o" />上海<van-icon name="arrow-down" /></view>
+  <scroll-view scroll-x="true" class="type-select">
+    <span class="{{item ==='推荐' ? 'act-type-selected' : 'act-type'}}" wx:for="{{typeList}}" >{{ item }}</span>
+  </scroll-view>
+</view>
+<scroll-view scroll-y="true" class="login-card" bindscrolltolower="scrolltolower">
+  <view class="act-content">
+    <view class="left-col">
+      <view  bindtap="bindViewTap" data-actid="{{ item.id }}"  wx:for="{{ leftList }}" wx:key="id" class="act-item">
+        <view class="act-img">
+          <image style="width: 100%" src="{{ item.img }}"></image>
+        </view>
+        <view class="act-title">{{ item.title }}</view>
+        <view class="act-info">
+          <image style="width: 24px;height: 24px;position: relative;left: -10px;" mode="scaleToFill" mode="cover" class="userinfo-avatar" src="{{ item.avatar }}"></image>
+          <div style="position: relative;left: -10px;">{{ item.user }}</div>
+          <div style="position: absolute;right: 10px;">{{ item.info }}</div>
+        </view>
+      </view>
+    </view>
+    <view class="left-col">
+      <view bindtap="bindViewTap" data-actid="{{ item.id }}" wx:for="{{ rightList }}" wx:key="id" class="act-item">
+        <view class="act-img">
+          <image style="width: 100%;" src="{{ item.img }}"></image>
+        </view>
+        <view class="act-title">{{ item.title }}</view>
+        <view class="act-info">
+          <image style="width: 24px;height: 24px;position: relative;left: -10px;" mode="scaleToFill" mode="cover" class="userinfo-avatar" src="{{ item.avatar }}"></image>
+          <div style="position: relative;left: -10px;">{{ item.user }}</div>
+          <div style="position: absolute;right: 10px;">{{ item.info }}</div>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="add-btn" bindtap="addActivity">
+  +
+</view>
+<van-popup
+  show="{{ showArea }}"
+  position="bottom"
+  custom-style="height: 40%;"
+  bind:close="onClose"
+>
+<van-area style="width: 100vw; height: 100%;"
+  area-list="{{ areaList }}" value="110101"
+/>
+</van-popup>

@@ -1,0 +1,46 @@
+.act-box{
+  margin: 20rpx 20rpx;
+  background: #e5e7e9;
+  border-radius: 20rpx;
+}
+.event{
+  display: flex;
+  height: 21vw;
+  padding: 10rpx 15rpx;
+}
+.event-pic{
+  display: grid;
+  width: 20vw;
+  gap: 2rpx;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10vw 10vw;
+}
+.time{
+  padding: 10rpx 15rpx;
+}
+.date-time{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.event-text{
+  padding: 0rpx 20rpx;
+}
+.event-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 15rpx;
+}
+.event-info{
+  font-size: .9rem;
+  font-weight: 400;
+  word-break:break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #333;
+}

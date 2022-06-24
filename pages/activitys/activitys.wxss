@@ -1,0 +1,230 @@
+.top-day{
+  width: 100vw;
+  background-color: #f7f8fa;
+  padding: 15rpx 0rpx 0rpx 15rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+.area{
+  width: 150rpx;
+}
+.type-select{
+  width: calc(100vw - 170rpx);
+  border-left: 1px solid #ccc;
+  white-space: nowrap
+}
+.act-type{
+  display: inline-block;
+  padding: 0rpx 20rpx;
+  font-weight: 400;
+  color: #455a6499;
+  height: 50rpx;
+}
+.act-type-selected{
+  display: inline-block;
+  padding: 0rpx 20rpx;
+  font-weight: 600;
+  color: black;
+  height: 50rpx;
+}
+
+.day-cont{
+  overflow-y: hidden;
+  overflow-x: auto;
+  width: calc(100vw - 30rpx);
+  justify-content: flex-start;
+  display: flex;
+}
+.scroll-view_H{
+  white-space: nowrap;
+  width: calc(100vw - 30rpx);
+}
+.days-list{
+  width: 80rpx;
+  margin-right: 28rpx;
+  height: 160rpx;
+  display: inline-block;
+}
+.days{
+  width: 80rpx;height: 80rpx;
+  border-radius: 40rpx;
+  color: #f7f8fa;
+  background-color: #ee0a24;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 1.3rem;
+}
+.days-selected{
+  width: 80rpx;height: 80rpx;
+  border-radius: 40rpx;
+  color: #ee0a24;
+  background-color: #f7f8fa;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 1.3rem;
+}
+.days-week{
+  width: 80rpx;height: 80rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.room-card{
+  width: calc(100vw - 40rpx);
+  height: 400rpx;
+  margin: auto;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  box-shadow: 0rpx 2rpx 2rpx #ffffff;
+  position: relative;
+}
+.top-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.top-image:after{
+  position: absolute;
+  border-radius: 20rpx;
+  top: 0;left: 0;
+  content: '';
+  background-image: linear-gradient(#00000070, #0000005d,#ffffffe7);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.info-content{
+  position: relative;
+  top: -400rpx;
+  height: 100%;
+  z-index: 20;
+}
+.top-info{
+  width: calc(100% - 40rpx);
+  margin: auto;
+  height: 50%;
+  border-bottom: 2rpx dashed #fff;
+  display: flex;
+}
+.info-left{
+  width: calc(56% - 20rpx);
+  height: calc(100% - 40rpx);
+  padding: 10rpx;
+  color: white;
+  border-image-source: radial-gradient(60% 70%, transparent 0px, transparent 100%, rgb(255, 255, 255) 100%);
+  border-image-slice: 1;
+  border-width: 6rpx;
+  border-style: solid;
+}
+.info-title{
+  font-size: 0.8rem;
+  line-height: 1rem;
+  height: 2rem;
+  font-weight: 400;
+}
+.info-time{
+  font-size: 1.5rem;
+}
+.info-member{
+  font-size: 0.8rem;
+}
+.join-btn{
+  width: 240rpx;
+  border-radius: 30rpx;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 2rem;
+  margin: auto;
+  margin-top: 30rpx;
+}
+.member-info{
+  width: 100%; height: 45%;
+}
+.userinfo-avatar {
+  overflow: hidden;
+  width: 76rpx;
+  height: 76rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+.bottom-btn{
+  position: absolute;
+  bottom: 40rpx;
+  width: calc(100% - 100rpx);
+  padding-left: 50rpx;
+}
+.login-card{
+  position: relative;
+  height: calc(100vh - 90rpx);
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.share-btn{
+  width: 240rpx;
+  border-radius: 30rpx;
+  border: 1px dashed #ee0a24;
+  background-color: white;
+  color: #ee0a24;
+  text-align: center;
+  line-height: 2rem;
+  margin: auto;
+  margin-top: 30rpx;
+}
+.act-content{
+  display: flex;
+  padding-left: 1.5vw;
+}
+.left-col{
+  width: 49vw;
+  display: flex;
+  flex-direction: column;
+}
+.act-item{
+  margin-right: 1vw;
+  border-radius: .5rem;
+  margin-bottom: 1vw;
+  background-color: #fff;
+}
+.act-img{
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  overflow: hidden;
+  width: 100%;
+}
+.act-title{
+  font-size: 1rem; font-weight: 400;
+  word-break:break-all;
+  max-height: 2.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #000;
+  padding: 10px 15px;
+}
+.act-info{
+  padding: 10px 15px;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+}
+.add-btn{
+  background-color: #ee0a24;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  color: #fff;
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw;
+  text-align: center;
+  line-height: 3.5rem;
+  font-size: 2.5rem;
+}

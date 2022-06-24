@@ -1,0 +1,113 @@
+<view class="base-style">
+
+  <view class="upload-style">
+    <van-uploader file-list="{{ fileList }}" mutiple="{{true}}"
+      deletable="{{ true }}" max-count="6" bind:delete="imageDel"
+      bind:after-read="afterRead" >
+      <view style="border-radius: 10rpx; height: 80px; width: 80px;border: 1px solid #ccc; background: white; text-align: center;">
+        <view style="font-size: 2rem; color: #ccc;">+</view>
+        <span style="font-size:.8rem; color: #ccc;">添加图片</span>
+      </view>
+    </van-uploader>
+  </view>
+
+  <view style="border-bottom: 1px solid #ececec;">
+    <van-field
+      model:value="{{ title }}"
+      placeholder="填写标题会有更多赞哦～"
+      border="{{ false }}"
+      maxlength="40"
+    />
+  </view>
+
+  <view style="margin: 30rpx 0rpx;background: white; height: 30vh;" bindtap="focusOn">
+    <van-field
+    model:value="{{ desc }}"
+    focus="{{ descFocus }}"
+    type="textarea"
+    placeholder="添加正文"
+    autosize
+    border="{{ false }}"
+  />
+  </view>
+
+<!-- 
+  <view style="margin: 30rpx 0rpx;">
+    <van-cell title="选择分类" is-link value="内容" arrow-direction="" bind:click="showTypePopup"/>
+    <van-popup show="{{ showType }}" 
+      position="bottom" custom-style="height: 30%;"
+      bind:close="onCloseType">
+      <view class="type-grid">
+        <view wx:for="{{typeoptions}}" class="type-col" wx:key="value">
+          {{item.text}}
+        </view>
+      </view>
+    </van-popup>
+  </view> -->
+
+  <view class="type-tag" bindtap="showTypePopup">{{selectedTag}}</view>
+  <van-popup show="{{ showType }}" 
+    position="bottom" custom-style="height: 30%;"
+    bind:close="onCloseType">
+    <view class="type-grid">
+      <view class="{{item.text === selectedTag ? 'type-selected' : 'type-col'}}"
+        wx:for="{{typeoptions}}" data-text="{{item.text}}" wx:key="value" bindtap="tapTypeChange">
+        {{item.text}}
+      </view>
+    </view>
+  </van-popup>
+
+  <view style="margin: 30rpx 0rpx;">
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <van-cell title="添加地点" is-link value="上海" icon="location-o"
+        arrow-direction=""/>
+    </picker>
+  </view>
+
+  <view class="switch-style">
+    开启组队
+    <switch style="margin-left: 5vw;" type="switch" checked="{{isTeam}}" bindchange="onChangeTeam"/>
+  </view>
+  <view wx:if="{{isTeam}}" class="team-info" bindtap="showTeamTab">
+    <view>{{currentDate}} {{startTime}} ~ {{endTime}}</view>
+    <view><van-icon name="friends-o" /> {{memberLimit}}</view>
+  </view>
+  <van-popup show="{{ isTeamUp }}" custom-style="height: 80vh;"
+    position="bottom" bind:close="onCloseTeamUp" round>
+    <view style="padding-bottom: 10vh;padding-top: 2vh;">
+      <view style="margin: 30rpx 0rpx;">
+        <picker mode="date" value="{{currentDate}}" start="2021-09-01" end="2022-09-01" bindchange="bindDateChange">
+          <van-cell title="活动日期" is-link value="{{currentDate}}"
+          arrow-direction="" />
+        </picker>
+  
+        <picker mode="time" value="{{startTime}}" start="09:01" end="21:01" bindchange="startTimeChange">
+          <van-cell title="开始时间" is-link value="{{startTime}}"
+          arrow-direction="" />
+        </picker>
+        <picker mode="time" value="{{endTime}}" start="09:01" end="21:01" bindchange="endTimeChange">
+          <van-cell title="结束时间" is-link value="{{endTime}}"
+          arrow-direction="" />
+        </picker>
+        <picker mode="selector" range="{{columns}}" value="{{memberLimit}}" bindchange="onChangeNum">
+          <van-cell title="活动人数上限" is-link value="{{memberLimit}}"
+          arrow-direction="" />
+        </picker>
+      </view>
+      <!-- <view class="slider-style">
+        <view style="margin-bottom: 40rpx; color: #333;">活动人数上限：</view>
+        <van-slider value="{{ memberLimit }}" use-button-slot bind:drag="onDrag" max="50">
+          <view class="custom-button" slot="button">{{ memberLimit }}</view>
+        </van-slider>
+        <view style="height: 10vh;width: 30vw; overflow: hidden;">
+          <van-picker style="position: relative; top: -240rpx;right: -50rpx; z-index: -1;" columns="{{ columns }}" bind:change="onChangeNum" />
+        </view>
+      </view> -->
+    </view>
+  </van-popup>
+
+
+<view class="bottom-input">
+  <van-button type="danger" round block bind:click="onCreate">发布活动</van-button>
+</view>
+</view>

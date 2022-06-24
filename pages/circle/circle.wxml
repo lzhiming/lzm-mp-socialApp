@@ -1,0 +1,95 @@
+<!--logs.wxml-->
+
+<image mode="widthFix" class="top-image" src="{{ topImg }}"></image>
+<view class="login-card">
+  <view class="act-title">
+    阿瓦隆小组
+  </view>
+  <view class="room-card">
+    <!-- <image mode="scaleToFill" class="top-image" src="/image/yjwj.jpg"></image> -->
+    <view class="info-content">
+      <view class="member-info">
+        <view style="color: #333;">12/20</view>
+        <image mode="scaleToFill" mode="cover" style="position: relative;" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132">
+          <view class="icon-lv">管理</view>
+        </image>
+        <image mode="scaleToFill" mode="cover" style="position: relative;" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132">
+          <view class="icon-sign">签约</view>
+        </image>
+        <image mode="scaleToFill" mode="cover" style="position: relative;" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q3auHgzwzM4vSzA98fVTMqia0yjZUYBa6mcSjlP58KoyrwH8a1ibhNMJHcR6V172UPxwtElLbwvGic0cJ39GYhkPg/132">
+          <view class="icon-sign">签约</view>
+        </image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q3auHgzwzM4vSzA98fVTMqia0yjZUYBa6mcSjlP58KoyrwH8a1ibhNMJHcR6V172UPxwtElLbwvGic0cJ39GYhkPg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q3auHgzwzM4vSzA98fVTMqia0yjZUYBa6mcSjlP58KoyrwH8a1ibhNMJHcR6V172UPxwtElLbwvGic0cJ39GYhkPg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q3auHgzwzM4vSzA98fVTMqia0yjZUYBa6mcSjlP58KoyrwH8a1ibhNMJHcR6V172UPxwtElLbwvGic0cJ39GYhkPg/132"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="act-info">
+    <view class="act-text">
+      每周末约阿瓦隆
+      <view>
+        需要5~10名参与者。
+      </view>
+    </view>
+    <view class="act-data">
+      创建于 2022-02-22 15:24
+    </view>
+  </view>
+
+  <view class="cirle-act">
+    活动
+  </view>
+
+  <view class="act-box" bindtap="bindViewTap">
+    <view class="time">
+      <view style="color: #333;">02/22</view>
+      <view class="date-time">12:30 ~ 16:20</view>
+    </view>
+    <view class="event">
+      <view class="event-pic">
+        <view wx:for="{{allImg}}" wx:key="id" style="overflow-y: hidden;width: 10vw;">
+          <image mode="widthFix" style="width: 10vw;" src="{{item.src}}"></image>
+        </view>
+      </view>
+      <view class="event-text">
+        <view class="event-title">
+          一起来玩阿瓦隆
+          <span style="font-size: .9rem;font-weight: 400; color: #333;">10 / 20</span>
+        </view>
+        <view class="event-info">
+          阿瓦隆是一款集推理，演说，隐藏身份于一体的言阿瓦隆是一款集推理，演说，隐藏身份于一体的推理，演说，隐藏身份于一体的言阿瓦隆是瓦隆是一款集言阿瓦隆是瓦隆是一款集推理，演说，隐藏身份于一体
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="act-box">
+    <view class="time">
+      <view style="color: #333;">02/22</view>
+      <view class="date-time">12:30 ~ 16:20</view>
+    </view>
+    <view class="event">
+      <view class="event-pic">
+        <view wx:for="{{allImg}}" wx:key="id" style="overflow-y: hidden;width: 10vw;">
+          <image mode="widthFix" style="width: 10vw;" src="{{item.src}}"></image>
+        </view>
+      </view>
+      <view class="event-text">
+        <view class="event-title">
+          一起来玩阿瓦隆
+          <span style="font-size: .9rem;font-weight: 400; color: #333;">10 / 20</span>
+        </view>
+        <view class="event-info">
+          阿瓦隆是一款集推理，演说，隐藏身份于一体的言阿瓦隆是一款集推理，演说，隐藏身份于一体的推理，演说，隐藏身份于一体的言阿瓦隆是瓦隆是一款集言阿瓦隆是瓦隆是一款集推理，演说，隐藏身份于一体
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

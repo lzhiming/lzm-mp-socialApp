@@ -1,0 +1,169 @@
+<!--logs.wxml-->
+<view class="login-card">
+  <swipe-img innerImg="{{ allImg }}"></swipe-img>
+  <view class="act-title">
+    {{title}}
+  </view>
+  <view class="room-card" wx:if="{{memberLimit}}">
+    <!-- <image mode="scaleToFill" class="top-image" src="/image/yjwj.jpg"></image> -->
+    <view class="info-content">
+      <view class="top-info">
+        <view class="info-left">
+          <view class="info-title">
+            <view style="align-items: center; display: flex;">
+              <image style="width: 24px;height: 24px;" mode="scaleToFill" mode="cover" class="userinfo-avatar" src="{{ avatar }}"></image>
+              {{nickName}}
+            </view>            
+            <span><van-icon name="friends-o" />{{current}}/{{memberLimit}}</span>
+          </view>
+          <view class="info-member">2022/02/26</view>
+          <view class="info-time">19:15 ~ 21: 45</view>
+        </view>
+        <view style="width: calc(44% - 20rpx);">
+          <view class="join-btn" wx:if="{{!hadJoined}}" bindtap="joinAct">立即加入</view>
+          <view class="join-btn" wx:else bindtap="leaveAct" style="background: #ccc;">退出活动</view>
+        </view>
+      </view>
+      <view class="member-info">
+        <view style="color: white;">3/20</view>
+        <image mode="scaleToFill" mode="cover" class="userinfo-avatar" wx:for="{{members}}" wx:key="openId"
+          src="{{ item.avatar }}"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="act-info">
+    <view class="act-text">
+      {{content}}
+    </view>
+    <view class="act-data">
+      发布于 {{publishOn}}
+    </view>
+  </view>
+
+  <view class="comment" style="padding-bottom: 10px;">
+    <view class="pre-comment">
+      <view class="comment-avatar">
+        <view class="user">
+          <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+          <view style="padding: 20rpx 10rpx 0rpx 20rpx;">
+            <view class="user-name">lzming</view>
+            <view class="user-date">02-25</view>
+          </view>
+        </view>
+        <view class="comment-stats" bindtap="replyTap">回复</view>
+      </view>
+      <view class="comment-text">
+        副驾留给我！副驾留给我！副驾留给我！副驾留给我！
+      </view>
+      <view class="comment-reply" bindtap="replyTap">
+        <span class="reply-user">七里香菜(作者)</span> : 来！！！！！带你去郊游嘿嘿
+      </view>
+      <view class="comment-reply" bindtap="replyTap">
+        <span class="reply-user">毛笔小新</span> : 哈哈哈哈哈哈哈哈哈哈
+      </view>
+    </view>
+  </view>
+  <view class="comment">
+    <view class="pre-comment">
+      <view class="comment-avatar">
+        <view class="user">
+          <image mode="scaleToFill" mode="cover" class="userinfo-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+          <view style="padding: 20rpx 10rpx 0rpx 20rpx;">
+            <view class="user-name">lzming</view>
+            <view class="user-date">02-26</view>
+          </view>
+        </view>
+        <view class="comment-stats" bindtap="replyTap">回复</view>
+      </view>
+      <view class="comment-text">
+        什么时候出发
+      </view>
+      <view class="comment-reply" bindtap="replyTap">
+        <span class="reply-user">七里香菜(作者)</span> : 嘿嘿
+      </view>
+      <view class="comment-reply" bindtap="replyTap">
+        <span class="reply-user">毛笔小新</span> :gogogo
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-input">
+    <view style="margin-bottom: 10rpx;" wx:if="{{focusInput}}">
+      回复<span class="reply-user">毛笔小新</span>:
+    </view>
+    <view style="display: flex;">
+      <van-field
+        style="width: calc(100vw - 220rpx);margin-right: 20rpx;"
+        model:value="{{ myreply }}"
+        placeholder="说点什么吧"
+        focus="{{focusInput}}"
+        bindblur="blurTap"
+        border="{{ false }}"
+      />
+      <view class="input-btn">发送</view>
+    </view>
+
+  </view>
+
+  <!-- <view class="user-list">
+    <view class="userinfo">
+      <view class="user-owner">拥有者</view>
+      <image mode="scaleToFill" mode="cover" class="member-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+      <view class="user-nickname">lzming</view>
+    </view>
+    <view class="userinfo">
+      <view class="user-default"></view>
+      <image mode="scaleToFill" mode="cover" class="member-avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKroOPzp2Yib0byD8icz3nrS2AQrj9hqHUyFLOcKsyzenLqgYPjMgoAE3TetlVUgUH48PoOKdXsr8Hg/132"></image>
+      <view class="user-nickname">lzming</view>
+    </view>
+  </view> -->
+  <!-- <view class="top-data">
+    <view bindtap="onDisplay" class="date-style">{{ date }}</view>
+  </view> -->
+  <van-calendar show="{{ show }}" bind:close="onClose" default-date="{{ calendarDate }}"
+    formatter="{{ formatter }}" bind:confirm="onConfirm" />
+
+
+  <van-dialog
+    use-slot
+    title="添加新活动"
+    show="{{ showCreate }}"
+    show-cancel-button
+    bind:close="closeCreate"
+    bind:confirm="confirmCreate"
+    zIndex="99"
+  >
+    <view style="padding: 0rpx 30rpx;">
+      <van-cell-group>
+        <van-field label="活动介绍"
+          value="{{ activity.desc }}"
+          placeholder="活动介绍"
+          border="{{ false }}"
+          required="{{ true }}"
+          clearable
+        />
+        <van-field label="活动时间"
+          value="{{ activity.time }}"
+          placeholder="请输入描述"
+          border="{{ false }}"
+          clearable
+        />
+        <van-cell title="人数限制"
+          is-link value="{{activity.count}}"
+          arrow-direction="down"
+        />
+      </van-cell-group>
+    </view>
+  </van-dialog>
+  <!-- <view class="log-list">
+    <view class="hour-event" wx:for="{{ logArray }}" wx:key="time">
+      <view class="hour-sign">
+        {{item.time}}
+      </view>
+      <view class="people-sign">
+        lzm
+      </view>
+    </view>
+  </view> -->
+</view>

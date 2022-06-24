@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="container">
+  <van-cell-group inset class="room-search">
+    <van-field value="{{ sms }}" center clearable placeholder="请输入圈号" border="{{ false }}"
+    use-button-slot>
+    <van-icon slot="right-icon" name="search" class="custom-icon" />
+  </van-field>
+  </van-cell-group>
+  <van-button type="primary" class="login-btn" 
+  bind:click="onCreate" type="danger" round block>创建圈子</van-button>
+  <van-dialog
+    use-slot
+    title="创建新圈子"
+    show="{{ show }}"
+    show-cancel-button
+    bind:close="onClose"
+    bind:confirm="onConfirm"
+    zIndex="99"
+  >
+    <image bindtap="bindViewTap" class="createInfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view style="padding: 0rpx 30rpx;">
+      <van-cell-group>
+        <van-field label="圈子名"
+          value="{{ createName }}"
+          placeholder="请输入圈子名"
+          border="{{ false }}"
+          required="{{ true }}"
+          clearable
+        />
+        <van-field label="描述"
+          value="{{ createDesc }}"
+          placeholder="请输入描述"
+          border="{{ false }}"
+          clearable
+        />
+        <van-cell title="选择类型"
+          is-link value="{{typeText}}"
+          arrow-direction="down" bindtap="bindTypeTap"
+        />
+      </van-cell-group>
+    </view>
+  </van-dialog>
+  <view class="room-container">
+    <view class="room" bindtap="bindViewTap" wx:for="{{ roomList }}" wx:key="roomId">
+      <image mode="scaleToFill" class="top-image" src="{{ item.topImg }}"></image>
+      <van-image round width="168rpx" height="168rpx" class="room-image"
+        src="https://img.yzcdn.cn/vant/cat.jpeg"
+      />
+      <view class="room-name">{{item.name}}</view>
+      <view class="room-desc">{{item.desc}}</view>
+      <view class="room-info">
+        <view>{{item.host}}</view>
+        <view>{{item.member}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <van-empty description="请授权获取头像昵称信息" style="text-align: center;">
+  <view style="width: 80vw;padding-top: 5vw;">
+    <van-button type="primary" plain type="danger" round block>授权登录</van-button>
+  </view>
+</van-empty> -->
+<van-action-sheet
+  show="{{ typeShow }}" bind:select="onSelectType"
+  bind:cancel="bindTypeCancel" bind:click-overlay="bindTypeOverlay"
+  actions="{{ typeList }}" cancel-text="取消"/>
+

@@ -1,0 +1,12 @@
+<!--logs.wxml-->
+<view class="login-card">
+  <view class="timer" bindtap="goAct">
+    跳过{{countdown}}
+  </view>
+  <view class="title">
+    九章
+  </view>
+  <view class="title-2nd">
+    play with me
+  </view>
+</view>

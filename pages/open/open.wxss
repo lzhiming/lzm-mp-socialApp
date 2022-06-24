@@ -1,0 +1,31 @@
+.login-card{
+  position: relative;
+  height: 100vh;
+  background-color: #fff;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  color: #f14224;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 30vh;
+  margin-bottom: 1vh;
+}
+.title-2nd{
+  color: #b8bdbb;
+  font-size: 1.5rem;
+}
+.timer{
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  width: 20vw;
+  height: 10vw;
+  background-color: #ccc;
+  border-radius: 5vw;
+  text-align: center;
+  line-height: 5vh;
+  font-size: 1rem;
+}

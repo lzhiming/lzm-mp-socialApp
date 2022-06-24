@@ -1,0 +1,331 @@
+.top-data{
+  height: 44px;
+  line-height: 44px;
+  display: flex;
+  justify-content: center;
+  /* box-shadow: 3px 3px 5px #cecece, -3px -3px 5px #fff; */
+}
+.has-log{
+  color: red;
+}
+.van-calendar__bottom-info{
+  font-size: 26px !important
+}
+.log-list{
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  padding-top: 20px;
+}
+.hour-event{
+  display: flex;
+  height: 50px;
+  width: 100vw;
+}
+.hour-sign{
+  position: relative;
+  top: -10px;
+  padding-left: 5px;
+  width: 50px;
+}
+.people-sign{
+  width: calc(100vw - 50px);
+  padding-left: 10px;
+  line-height: 50px;
+  border-top: 1px solid #ccc;
+}
+.date-style{
+  background: var(--button-danger-background-color,#ee0a24);
+  border: var(--button-border-width,1px) solid var(--button-danger-border-color,#ee0a24);
+  color: var(--button-danger-color,#fff);
+  padding: 0px 50px;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 35px;
+  margin-top: 4px;
+}
+
+.room-card{
+  width: 100vw;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  box-shadow: 0rpx 2rpx 2rpx #ffffff;
+  position: relative;
+}
+.top-image{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.top-image:after{
+  position: absolute;
+  border-radius: 20rpx;
+  top: 0;left: 0;
+  content: '';
+  background-image: linear-gradient(#00000070, #0000005d,#ffffffe7);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.info-content{
+  position: relative;
+  padding: 10rpx 15rpx;
+  border-radius: 10rpx;
+  z-index: 20;
+  background-color: #fff;
+}
+.top-info{
+  border-bottom: 2rpx dashed #fff;
+  display: flex;
+  justify-content: space-evenly;
+}
+.info-left{
+  width: calc(56% - 20rpx);
+  padding: 10rpx;
+  border-image-source: radial-gradient(60% 70%, transparent 0px, transparent 100%, #ccc 100%);
+  border-image-slice: 1;
+  border-width: 6rpx;
+  border-style: solid;
+}
+.info-title{
+  font-size: 0.8rem;
+  line-height: 1rem;
+  height: 2rem;
+  font-weight: 400;
+  margin-bottom: 20rpx;
+}
+.info-time{
+  font-size: 1.5rem;
+}
+.info-member{
+  font-size: 0.8rem;
+}
+.join-btn{
+  width: 240rpx;
+  border-radius: 30rpx;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 2rem;
+  margin: auto;
+  margin-right: 0px;
+  margin-top: 30rpx;
+}
+.member-info{
+  width: 100%; height: 45%;
+}
+.userinfo-avatar {
+  overflow: hidden;
+  width: 76rpx;
+  height: 76rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+.bottom-btn{
+  position: absolute;
+  z-index: 10;
+  bottom: 40rpx;
+  width: calc(100% - 100rpx);
+  padding-left: 50rpx;
+}
+.login-card{
+  position: relative;
+  background-color: #f7f8fa;
+  padding-bottom: 20rpx;
+  margin-top: 60vw;
+}
+.user-list{
+  padding: 11px 0 0 11px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.userinfo{
+  position: relative;
+  width: 100rpx;
+  text-align: center;
+  margin-right: 15rpx;
+}
+.user-owner{
+  position: absolute;
+  font-size: .8rem;
+  width: 100rpx;
+  color: #fff;
+  background-color: #ee0a24;
+  text-align: center;
+  top: 0; right: 0;
+}
+.user-default{
+  position: absolute;
+  font-size: .8rem;
+  width: 100rpx;height: 1rem;
+  color: #fff;
+  text-align: center;
+  top: 0; right: 0;
+}
+.icon-lv{
+  padding: 0rpx 5rpx;
+  background: crimson;
+  color: white;
+  position: absolute;
+  left: 10rpx; top: 0;
+  font-size: .5rem;
+}
+.icon-sign{
+  padding: 0rpx 5rpx;
+  background: #2196f3;
+  color: white;
+  position: absolute;
+  left: 10rpx; top: 0;
+  font-size: .5rem;
+}
+.member-avatar{
+  overflow: hidden;
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+}
+.user-nickname{
+  font-size: .8rem;
+}
+
+
+.act-title{
+  font-weight: 500;
+  padding: 10rpx 35rpx;
+  font-size: 1.2rem;
+}
+.act-info{
+  padding: 10rpx 35rpx;
+}
+.act-text{
+  font-weight: 400;
+  font-size: 1rem;
+}
+.act-data{
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  color: #999;
+  border-bottom: 1px solid #ccc;
+}
+.comment{
+  padding: 0 0 140rpx;
+}
+.pre-comment{
+  padding: 10rpx 20rpx;
+}
+.comment-avatar{
+  overflow: hidden;
+  position: relative;
+}
+.user{
+  float: left;
+  display: flex;
+  justify-content: space-around;
+}
+.user-name{
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+.user-date{
+  font-size: .8rem;
+  color: #999;
+}
+.comment-stats{
+  float: right;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.comment-text{
+  padding: 20rpx 10rpx 20rpx 0rpx;
+  margin-left: 100rpx;
+}
+.comment-reply{
+  margin-left: 100rpx;
+  padding: 20rpx 10rpx 10rpx 20rpx;
+  color: #333;
+  background-color: #eff3f5;
+}
+.reply-user{
+  font-size: .9rem;
+  color: #00a1d6;
+}
+.bottom-input{
+  position: fixed;
+  bottom: 0;
+  background-color: #f8f8f8;
+  padding: 20rpx 15rpx;
+  border-top: 1px solid #ccc
+}
+.input-btn{
+  width: 170rpx;
+  background: #1989fa;
+  color: white;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 2.7rem;
+  font-size: 1rem;
+}
+.cirle-act{
+  border-left: 6rpx solid #ee0a24;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  padding-left: 10rpx;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  color: #333;
+  font-weight: 500;
+}
+.act-box{
+  margin: 20rpx 20rpx;
+  background: #e5e7e9;
+  border-radius: 20rpx;
+}
+.event{
+  display: flex;
+  height: 21vw;
+  padding: 10rpx 15rpx;
+}
+.event-pic{
+  display: grid;
+  width: 20vw;
+  gap: 2rpx;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10vw 10vw;
+}
+.time{
+  padding: 10rpx 15rpx;
+}
+.date-time{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.event-text{
+  padding: 0rpx 20rpx;
+}
+.event-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 15rpx;
+}
+.event-info{
+  font-size: .9rem;
+  font-weight: 400;
+  word-break:break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #333;
+}

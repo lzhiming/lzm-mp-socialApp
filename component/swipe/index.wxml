@@ -1,0 +1,7 @@
+<swiper circular indicator-dots style="height: 142vw;">
+  <block wx:for="{{innerImg}}" wx:key="id">
+    <swiper-item style="text-align: center;height: 140vw;">
+      <image webp style="width: 100%; height: 100%;" src="{{item.src}}"></image>
+    </swiper-item>
+  </block>
+</swiper>

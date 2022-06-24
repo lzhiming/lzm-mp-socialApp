@@ -1,0 +1,38 @@
+{
+  "entryPagePath": "pages/open/open",
+  "pages":[
+    "pages/open/open",
+    "pages/myevent/myevent",
+    "pages/activitys/activitys",
+    "pages/logs/logs",
+    "pages/circle/circle",
+    "pages/index/index",
+    "pages/new/new"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于寻找附近的活动"
+    }
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f7f8fa",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#ee0a24",
+    "backgroundColor": "#f7f8fa",
+    "borderStyle": "black",
+    "list": [
+      {"pagePath": "pages/myevent/myevent",
+        "text": "我的活动"},
+      {"pagePath": "pages/activitys/activitys",
+        "text": "发现"},
+      {"pagePath": "pages/index/index",
+       "text": "我的圈子"}
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

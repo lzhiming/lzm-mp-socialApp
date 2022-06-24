@@ -1,0 +1,95 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.createInfo-avatar{
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  margin-left: calc(50% - 64rpx);
+}
+.usermotto {
+  margin-top: 200px;
+}
+
+.login-btn{
+  margin-top: 10px;
+  width: calc(100vw - 40px);
+}
+.room-search{
+  border: 1px solid red;
+  border-radius: 50px;
+  width: calc(100vw - 40px);
+  background-color: #fff;
+}
+
+.room-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20rpx;
+}
+.room{
+  width: calc(50vw - 30rpx);
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  height: 470rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 1rpx 1rpx #bebebe;
+  text-align: center;
+  position: relative;
+}
+.room-image{
+  position: relative; top: -84rpx;
+  z-index: 2;
+}
+.top-image{
+  height: 180rpx;width: 100%;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.top-image:after{
+  position: absolute;
+  top: 0;left: 0;
+  content: '';
+  background-image: linear-gradient(#ffffff00,#ffffff00,#ffffff85,#ffffff);
+  z-index: 1;
+  width: 100%;height: 180rpx;
+}
+.room-image .van-image{
+  border: 2px solid #fff;
+}
+.room-name{
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative; top: -84rpx;
+}
+.room-desc{
+  color: #455a6499;
+  font-weight: 400;
+  font-size: 1rem;
+  position: relative; top: -84rpx;
+}
+.room-info{
+  color: #455a6499;
+  width: calc(100% - 30rpx);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  padding: 15rpx;
+  bottom: 0rpx;
+}

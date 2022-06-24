@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "发现活动",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-area": "@vant/weapp/area/index"
+  }
+}
